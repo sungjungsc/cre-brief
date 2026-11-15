@@ -1,53 +1,48 @@
-# CRE findings — 2026-11-08
+# CRE findings — 2026-11-15
 
-INDEX: Apartment List (Sept data, "Oct 2026" national update, pub 2026-09-29), basis=all-unit; national median $1,388, -0.1% MoM, -0.4% YoY (carried fwd; Nov report due late Nov/early Dec, not out). Metro YoY/vacancy carried fwd from Apt List Aug metro reports (2026-09-27). Yardi Matrix Oct 2026 metro reports: US avg advertised rent +0.4% YoY (snippet). 15 searches, 0 fetches used.
+INDEX: Apartment List, "Nov 2026" national report (Oct data, pub ~early Nov 2026 via CRE Daily snippet), basis=all-unit; national median $1,384, YoY +0.1% (first positive YoY since mid-2023; trough -1.6% Apr 2026); Apt List forecasts 2026 = first full year of gains since 2022 (snippet est.). Prior: Sept data $1,388, -0.4% YoY. Metro YoY tables NOT surfaced for Oct data — metro figures carried fwd from Apt List Aug metro data (2026-09-27) unless noted; Austin Sept data from Apt List snippet. 20 searches, 1 fetch attempted (credaily.com blocked by network policy — failed, not retried).
 
 ## macro
-- 10-yr UST: no new reading surfaced this week. Last carried: 5.10% on 2026-10-15 (FRED), ~5.12% 10-21 | stale >7d (tradingeconomics/Kalshi snippets undated/conflicting, not used)
-- Fed: HELD 3.75-4.00% on 2026-10-28, 10-2 vote; markets price Dec hike; next FOMC Dec 8-9 | Admiral Markets | 2026-10-28 (carried, single source, snippet est.)
-- Mortgage: Freddie 30-yr 7.18% wk of 11-05 (down from 7.24% prior wk; 7.32% 10-22; 7.40% 10-15/10-08) | FRED/Freddie via snippet | 2026-11-05
-- CRE cap: RealPage Q2 2026 MF cap rate avg 5.79% (Q1 5.71%, Q2'25 5.52%; highest since Q3 2015); Q2 volume $36.7B ~flat YoY on 7.4% fewer properties, ~1/3 below 5-yr avg $54B | RealPage | Q2 2026 stale
-- W&D Q2: $ volume within 3% of pre-COVID avg, deal count ~20% below | Walker & Dunlop | Q2 2026 stale
-- Matrix attributed weaker mid-2026 volume to inflation/higher Treasury rates tied to Iran conflict | snippet
-- CBRE: cap rates could rise 40-60 bps as 10-yr tops 5% (CRE Daily headline, undated, carried)
+- 10-yr UST: 4.88% on 2026-11-09 (FRED DGS10 via snippet); 4.86% 11-06, 4.84% 11-05 (YCharts); was >5.25% early Oct, 5.10% 10-15 → ~-22 bps vs mid-Oct | FRED/YCharts | 2026-11-09. 10-yr auction high yield 5.02% (investinglive headline, date n/a — not used). Snippet headline "Treasury yields fall as Democrats sweep Congress" (tradingeconomics, early Nov) — context only.
+- Fed: held 3.75-4.00% on 2026-10-28; Oct payrolls +165k (≈3x consensus), unemployment 4.1% (BLS, rel. 2026-11-06); Dec hike odds ~77-80% post-release, up from ~67-72% (CME FedWatch/LSEG via InvestmentNews, primerates snippets) | next FOMC Dec 8-9; Nov jobs report Dec 4 | 2026-11-06
+- Mortgage: Freddie 30-yr 7.18% wk of 11-05 (carried, no newer surfaced)
+- CRE cap/debt: IPA Q3 2026: apartment sales recovery slow/uneven; cap-rate spread over Treasuries squeezed 17 straight quarters | IPA via snippet | Q3 2026. NMHC Q3 2026 sales-volume index 46 (<50 = lower volume). Apartment sales $208.1B annualized, inflated by AvalonBay–Equity Residential merger; deal count down (CRE Daily headline "Apartment Sales Fall 6%"). Small MF cap avg 6.0% Q2'26 (5.8% Q1) (Arbor/Chandan). RealPage Q2 MF cap 5.79% (carried, stale).
 
 ## multifamily
-- Dallas | Apt List Aug -2.3% YoY $1,417 vac 8.89% (carried 09-27) | Matthews Q3'26 DFW: vac 6.1%, avg rent $1,493 +0.2% YoY, Q3 completions 6,390, TTM completions 26,062 (-23%), TTM absorption 25,244 | txn n/a | OVERSUPPLY (easing) — carried fwd
-- Houston | Apt List Aug -2.2% $1,336 vac 8.39% (carried) | Yardi Jul 2026: occ 91.6%, asking rent $1,359, -1.2% YoY (via TenantBase snippet); Lee & Assoc Q3'26: TTM net absorption 9,548 (vs 6,976 Q2), vacancy steady | txn n/a | Q3 2026 (Lee, new)
-- Indianapolis | Apt List -0.3% $1,239 (carried); Apts.com Sept +1.0% (carried) | M&M: ~2,100 deliveries 2026, inventory +1.1%; CoStar: vacancy highest in >decade (2025 framing) | txn n/a
-- Columbus (Hilliard) | Apt List -0.3% $1,308; Apts.com Sept +1.2% (carried) | Hilliard: Tempo (Milhaus/HGI) 359 units, leasing since ~Feb 2026; Gables West (184 units) sold $22.5M to Columbus Metropolitan Housing Authority (date n/a); The Hilliard Pointe 218 units, Nimes acquisition w/ Newmark $22.9M Fannie Mae loan (date n/a); Hilliard among most active MF submarkets Mar'25-Feb'26 | MHN/CoStar snippets, undated
-- Charlotte (Matthews) | Apt List Aug -2.5% $1,314 vac 9.25% (carried) | Matthews Q3'26: vac 6.0% (+52bp YoY), avg rent $1,547 -0.4% YoY, Q3 absorption 1,233 vs 2,727 PY, TTM completions 9,284 (-45%), TTM absorption 7,441 (-62%) | OVERSUPPLY (carried)
-- San Antonio | Apt List Aug -5.1% (largest decline among 1M+ metros), median $1,148 (carried) | permits -24.1% YoY (Austin -25.3%) through Aug 2026 (Austin Business Journal via snippet) | OVERSUPPLY
-- Austin | Apt List Aug -2.9%; vac 9.31% (carried) | Matthews Q3'26 vac 11.8%; Cushman Q3 vac 9.0% (carried) | apartment permits -79% vs 5 yrs ago, ~15,000 residential units approved thru Aug 2026 — pipeline thinning | OVERSUPPLY (easing)
-- Atlanta (held) | Apts.com Sept +1.1%; Apt List -0.2% $1,540 (carried)
-- National: Yardi Matrix Oct 2026 US avg advertised rent +0.4% YoY (Cleveland +2.5%, Portland -0.6%, Miami +0.1% T3); CRE Daily Jul national +1.8% YoY (provider unclear)
+- Dallas | Apt List Aug -2.3% YoY vac 8.89% (carried 09-27) | Matthews Q3'26 vac 6.1%, rent +0.2% YoY (carried) | H1'26 absorption ~20k (Northmarq) / 24,978 (Transwestern); Q2 absorption 12,042 vs 6,238 deliveries; 43,320 u/c, ~24,133 delivering next 12 mo (Transwestern Q2); CoStar TTM Q2 absorption 28,600 (+10%), completions -26% | txn n/a | OVERSUPPLY (easing; demand > deliveries) | Q2-Q3 2026
+- Houston | Apt List Aug -2.2% vac 8.39% (carried) | Lee Q3'26 TTM absorption 9,548 (carried) | txn n/a
+- Indianapolis | Apt List -0.3% (carried); Apts.com Sept +1.0% (carried) | ~2,100 deliveries 2026 (M&M, carried) | txn n/a
+- Columbus (Hilliard) | Apt List -0.3%; Apts.com Sept +1.2% (carried) | Hilliard: Tempo 359u leasing since ~Feb 2026; Gables West 184u sold $22.5M to CMHA; Hilliard Pointe 218u $22.9M Fannie loan (all carried, undated) | no new item
+- Charlotte (Matthews) | Apt List Aug -2.5% vac 9.25% (carried) | Matthews Q3'26 vac 6.0%, rent -0.4% YoY, TTM completions 9,284 (-45%) (carried) | txn: no Nov deal; latest Belmont Heights 176u >$31M (Burlington Capital, CoStar 2026-04-20); NoDa Flats 273u $75M TA Realty→GrayCo (2026-02-04) | OVERSUPPLY (easing)
+- San Antonio | Apt List Aug -5.1% (carried) | CRE Daily headline "SA rents fall 3.4% as supply piles up" (provider/date n/a, recent); Northmarq: ~2,600 units deliver 2026 (-63% vs 2025, slowest since 2011); Q1'26 12 sales, median $132.6k/unit, avg cap 6.0% (+~50 bps vs 2024), some forced sales; MHN Oct 2026: oversupply still a factor near/medium term; TPR 09-14: "supply cliff" looming | OVERSUPPLY
+- Austin | Apt List Sept data: -2.3% YoY, vac 9.0% (vs 6.8% national), >20% below 2022 peak, >half of units offer >1 month free | Matthews Q3 vac 12.3% (peak 15.8% Q3'24), eff. rent -3.9% YoY; RealPage Q2 +1.3% QoQ (first positive since 2022); 37% of stabilized units w/ concessions (Jul, highest of top 50), avg discount 15.2% | OVERSUPPLY (concession-heavy, early stabilization)
+- Atlanta (held) | Apts.com Sept +1.1%; Apt List -0.2% (carried)
+- National supply: CRE Daily headline "Apartment openings fall 27% in 2026" (NY metro exception)
 
 ## leaderboard
-INDEX: mixed, tagged. No new full table (carried from last week).
-TOP: 1 San Francisco +11.7% (Zillow Aug) | 2 San Jose +8.0% (Zillow Aug) | 3 Norfolk +5.8% (Apts.com Sept) | 4 East Bay +5.4% | 5-10 n/a; Cleveland +2.5% (Yardi Oct, new, rank n/a)
-BOTTOM (Apt List Aug): 1 San Antonio -5.1% | 2 Las Vegas -3.6% | 3 Denver -3.4% | 4 Austin -2.9% | Dallas -2.3%, Houston -2.2% | 5-10 n/a
+INDEX: no new full metro table this week (Oct-data metro ranks not in snippets). Carried mixed basis from 11-08.
+TOP: 1 San Francisco +11.7% (Zillow Aug) | 2 San Jose +8.0% (Zillow Aug) | 3 Norfolk/Va Beach +5.8% (Apts.com Sept) | 4 East Bay +5.4% | Cleveland +2.5% (Yardi Oct, rank n/a) | 5-10 n/a. Sept MoM leaders (Apt List): SF, San Jose, Va Beach, Milwaukee, Chicago.
+BOTTOM (Apt List Aug): 1 San Antonio -5.1% | 2 Las Vegas -3.6% | 3 Denver -3.4% | 4 Austin -2.9% (Sept: -2.3%) | Dallas -2.3% | Houston -2.2% | Phoenix in decliners (value n/a) | others n/a. Sept MoM laggards: San Antonio, Las Vegas, Denver, Phoenix, Austin.
 
 ## student-national
-- RealPage: Fall 2026 final (Aug) 95.9% pre-leased, 2nd to record 96.5% | 2026-08 stale
-- Yardi: Yardi 200 prelim occupancy 94.5% Sept for 2026-27; rent growth +1.1% for 2026-27 (carried); Yardi July pre-lease est. 89.1%; same-store rent growth avg +0.4% since Oct 2025 | 2026-09
-- No Fall 2027 cycle data surfaced (RealPage "3.3% Oct" / "17.3% Nov" items are the Fall 2026 cycle read, not used as current)
+- RealPage: Fall 2026 final 95.9% pre-leased (Aug), near record 96.5% | 2026-08 stale. Fall 2027 cycle readings not yet surfaced.
+- Yardi: Oct 2026 national report — fall occupancy expected to finish below 2025; Yardi 200 prelim occupancy 94.5% Sept; Aug pre-lease 93% (+80 bps vs Aug 2025 final); 2026-27 rent growth +1.1% (vs +2.8% PY); fall 2026 enrollment +0.6% at 38 reporting schools (+6,840 students); 18,500 beds u/c across Yardi markets → pressure next year | Yardi Matrix via MHN | 2026-10
 
 ## student-campus
-- UT Austin | supply | Icon 555 beds + Villas 670-bed tower (delivered 2025); 30-story tower; no new 2026 verified item | MHN/GSL | 2025-26 (carried)
-- UTSA | enroll | 38,200+ fall 2025 (+7%); >2,700 beds near downtown since 2019 (carried) | 2025-26
+- UT Austin | supply | no new 2026 item; West Campus towers (Icon 555, Villas 670) delivered 2025 (carried); Austin conventional vac 9% / heavy concessions is a competing-option signal
+- UTSA | enroll | 38,200+ fall 2025 (+7%), carried; SA conventional market concession-heavy (separate asset class)
 - Georgia State | enroll | record 54,320 (+1.24%) | Atlanta News First | 2026-10-14 (carried)
-- UCSB | supply/enroll | San Benito ~2,100 beds fall 2027 (carried)
-- U Florida | supply | broker flyer: only 705 beds delivering next year, 3rd smallest SEC pipeline (behind Tuscaloosa, Starkville); Gator Walk 294 beds broke ground; plus Balfour Beatty 2,217-bed on-campus (carried) | JLL flyer/MHN | 2026
-- Michigan | supply | Chapter Ann Arbor 625 beds finishing before 2027-28; Core Spaces 639-bed/202-unit high-rise planned; Landmark/Cerca Trova 521 beds opened (date n/a) | REBusiness/MHN | undated
-- Alabama | supply | The Walk 251 beds opened; Greystar $70M project land purchased (undated, carried)
-- USC-Columbia | enroll | fall 2026 ~41,650 Columbia (+2.5%); $210M ~1,800-bed project slipping; 504-bed near-campus 99% prelease AY26/27 | USC | 2026-09 (carried)
+- UCSB | supply | San Benito ~2,100 on-campus beds fall 2027 (carried); no new Isla Vista item surfaced
+- U Florida | supply | Zaya 703 beds (3600 SW 20th Ave, Gilbane/CBRE IM) leasing; Chapter House UF 684 beds (908 Group, 920 SW Depot Ave) broke ground; Balfour Beatty/Stellar 2,217-bed on-campus redevelopment u/c (part of ~$2B plan); only ~705 beds delivering next AY; ~8k on-campus beds, no live-on req, 50k+ seek off-campus | REBusiness/MHN/JLL | 2026 (mixed dates)
+- Michigan | supply | U-M Central Campus housing/dining: 5 halls, 2,300 beds; Rambler Ann Arbor 1,009 beds (LV Collective/Harrison Street) across from campus (undated); Chapter Ann Arbor 625 beds before 2027-28 (carried) | BDC/REBusiness | undated
+- Alabama | supply | The Walk 251 beds opened; Greystar $70M site (carried); Tuscaloosa 2nd-smallest SEC pipeline per UF broker flyer (carried)
+- USC-Columbia | enroll | fall 2026 ~41,650 (+2.5%); $210M ~1,800-bed project slipping; 504-bed near-campus 99% pre-leased AY26/27 | USC | 2026-09 (carried)
 
 ## hotels
-- National: wk Oct 18-24: RevPAR $125.31 (+12.6%), occ 69.8% (+4.8%), ADR $179.55 (+7.4%); luxury led; Chicago/Tampa strong | CoStar via Travel Extra | 2026-10-24 (single secondary, snippet est.); wk Oct 11-17 RevPAR $125.53 (+5.5%) carried
-- CoStar/Tourism Economics 2026 US RevPAR forecast +2.8%; YTD thru Apr +4.0%
-- Austin | M&M 2026 forecast RevPAR ~$101.33, ADR ~$163.34 (carried forecast); HVS: 2025 atypical Austin conditions not expected to recur
-- LA/Burbank | no Burbank data; LA Q1'26 recovery vs 2025 fires (Pebblebrook LA RevPAR +31.5%, occ 74.6%) | CoStar | Q1 2026 stale
-- OKC | no city data; CoStar notes Oklahoma state strength in Q1 | stale
+- National: wk ending Oct 31 2026: occ 61.8% (+4.3%), ADR $164.95 (+5.2%), RevPAR $101.88 (+9.7%); 20 of Top 25 markets RevPAR up | CoStar via snippet | pub 2026-11-05. Prior wk Oct 18-24 RevPAR $125.31 (+12.6%). YA comps: wk end Nov 15 2025 RevPAR $93.97 (-4.6%).
+- Austin | no Oct figure; M&M Q1'26: occupancy decreasing at slower pace, ADR/RevPAR among highest TX metros; 1 Hotel Austin Waterline (252 rooms) opened Sept 2026 (Lodging Development, data as of Oct 2026); convention center closed for rebuild (CoStar May 2026 headline) | 2026
+- LA/Burbank | no Burbank data; LA Q1 RevPAR +31.5%, occ 74.6% (Pebblebrook, post-fire rebound); Feb wk RevPAR +26.5% $173.40 (NBA All-Star); World Cup lift all chain scales; HVS 2026 LA RevPAR fcst +4.5%, expects H2 fade; CoStar headline "cooling summer demand mutes LA hotel performance" | stale
+- OKC | no reliable 2026 figure (only unverifiable aggregator pages, discarded); Newmark 1Q25 occ down slightly YoY (stale)
 
 ## gaps
-- 10-yr UST after 10-21; Nov/Oct metro rent tables; leaderboard ranks 5-10; Dallas/Charlotte/Indy new Q3 items; transactions all metros; Burbank/Austin/OKC weekly hotel; Fall 2027 pre-lease; new campus items for UCSB/GSU/UTSA/USC
+- 10-yr close for 11-13; Apt List Oct-data metro table (leaderboard ranks 5-10 both sides); fresh Q3/Q4 Houston/Indy/Columbus items; Nov transactions for all metros; weekly Burbank/Austin/OKC hotel data; Fall 2027 pre-lease (RealPage/Yardi); new Isla Vista, Tuscaloosa, West Campus, UTSA, GSU, USC items; credaily.com not reachable via fetch (network policy)

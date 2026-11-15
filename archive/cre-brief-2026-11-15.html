@@ -1,0 +1,380 @@
+<!--
+  WEEKLY CRE MARKET BRIEF — reusable template
+  ------------------------------------------------------------------
+  How the scheduled task uses this file:
+   1. Phase 2 clones this file to index.html (and archive/cre-brief-YYYY-MM-DD.html)
+   2. Fills the zones marked  <!-- FILL: ... -->  with real content
+   3. Leaves the CSS in <style> untouched so every week looks identical
+  Reusable components (copy the pattern, don't restyle):
+   - Delta chip:   <span class="chip up">+0.4%</span>  |  .down  |  .flat
+   - Flag chip:    <span class="chip flag">Oversupply</span>
+   - Data row:     add class="held" to a <tr> for a metro we own (bolds + accent rail)
+   - n/a value:    <span class="na">n/a this week</span>
+   - Stale flag:   <span class="stale">as of MM-DD</span> for figures >30 days old
+  No external calls: all CSS inline, fonts are system stacks only.
+
+  SELF-VERIFY before writing index.html — confirm every zone is filled:
+   [ ] <title> + <h1>  = this week's date
+   [ ] coverage window + generated timestamp
+   [ ] macro strip: 3 cells (10-yr, Fed, CRE debt/cap)
+   [ ] §2 multifamily: 1 row per held metro (Dallas, Houston, Indianapolis,
+       Columbus/Hilliard, Charlotte/Matthews) — class="held" on each
+   [ ] §3 student: national anchor block filled (RealPage + Yardi pace);
+       1 row per campus (GSU, UTSA, UT Austin, UCSB, UF, Michigan, Alabama,
+       USC-Columbia) with a supply/enrollment/pre-lease signal — n/a is the
+       exception, not the default
+   [ ] §4 hotels: 1 row each (LA/Burbank, Austin, OKC)
+   [ ] §5 watch: 3–5 items
+   [ ] leaderboard: Top 10 + Bottom 10, held metros class="held"
+   [ ] sources footer: 1 line per source + date; disclaimer intact
+   [ ] no leftover placeholder text ("Example Metro", "06-XX", sample rows)
+-->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly CRE Market Brief — 2026-11-15</title><!-- FILL: date -->
+<style>
+  :root{
+    --ink:#14181f; --paper:#ffffff; --panel:#f4f6f8; --panel-2:#eef1f5;
+    --line:#e2e6eb; --muted:#697079; --accent:#1f5f9e;
+    --up:#17795e; --down:#b23a48; --flag:#8a5a00;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --mono:"SF Mono","Cascadia Mono","JetBrains Mono",Consolas,"Roboto Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:15px; line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:960px; margin:0 auto; padding:0 24px 72px}
+
+  /* ---------- header band ---------- */
+  header{border-bottom:2px solid var(--ink); padding:34px 0 20px; margin-bottom:8px}
+  .eyebrow{
+    font-family:var(--mono); font-size:11px; letter-spacing:.22em;
+    text-transform:uppercase; color:var(--accent); margin:0 0 10px;
+  }
+  h1{
+    font-size:30px; line-height:1.12; font-weight:800; letter-spacing:-.015em;
+    margin:0 0 12px; max-width:22ch;
+  }
+  .meta{
+    font-family:var(--mono); font-size:12px; color:var(--muted);
+    display:flex; gap:20px; flex-wrap:wrap;
+  }
+  .meta b{color:var(--ink); font-weight:600}
+
+  /* ---------- macro strip (the hero: top-line rate readout) ---------- */
+  .macro{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:1px;
+    background:var(--line); border:1px solid var(--line);
+    margin:22px 0 40px;
+  }
+  .macro .cell{background:var(--panel); padding:16px 18px}
+  .macro .k{
+    font-family:var(--mono); font-size:11px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--muted); margin:0 0 8px;
+  }
+  .macro .v{font-family:var(--mono); font-size:24px; font-weight:600; font-variant-numeric:tabular-nums}
+  .macro .sub{font-family:var(--mono); font-size:12px; color:var(--muted); margin-top:4px}
+
+  /* ---------- sections ---------- */
+  section{
+    display:grid; grid-template-columns:44px 1fr; gap:0 20px;
+    padding:30px 0; border-top:1px solid var(--line);
+  }
+  .num{
+    font-family:var(--mono); font-size:13px; font-weight:600;
+    color:var(--accent); padding-top:4px;
+  }
+  h2{font-size:19px; font-weight:700; letter-spacing:-.01em; margin:0 0 14px}
+  section > .body{grid-column:2}
+  p{margin:0 0 12px} p:last-child{margin-bottom:0}
+  .lede{color:var(--ink)}
+
+  /* ---------- chips ---------- */
+  .chip{
+    font-family:var(--mono); font-size:12px; font-weight:600;
+    padding:1px 7px; border-radius:3px; white-space:nowrap;
+    font-variant-numeric:tabular-nums;
+  }
+  .chip.up{color:var(--up); background:rgba(23,121,94,.10)}
+  .chip.down{color:var(--down); background:rgba(178,58,72,.10)}
+  .chip.flat{color:var(--muted); background:var(--panel-2)}
+  .chip.flag{color:var(--flag); background:rgba(138,90,0,.10)}
+
+  /* ---------- tables ---------- */
+  table{width:100%; border-collapse:collapse; margin:6px 0 4px; font-size:14px}
+  th{
+    font-family:var(--mono); font-size:11px; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--muted); font-weight:600;
+    text-align:left; padding:8px 10px; border-bottom:1px solid var(--ink);
+  }
+  th.r,td.r{text-align:right}
+  td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+  td.num-cell{font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+  tr.held td{font-weight:700}
+  tr.held td:first-child{box-shadow:inset 3px 0 0 var(--accent); padding-left:12px}
+  .src{font-family:var(--mono); font-size:11px; color:var(--muted); white-space:nowrap}
+  .na{color:var(--muted); font-style:italic}
+  .stale{font-family:var(--mono); font-size:11px; color:var(--flag)}
+  caption{caption-side:top; text-align:left; font-size:12px; color:var(--muted); margin-bottom:8px}
+
+  /* ---------- national anchor callout (student §3) ---------- */
+  .anchor{background:var(--panel); border-left:3px solid var(--accent); padding:12px 16px; margin:2px 0 18px; font-size:14px}
+  .anchor p{margin:0 0 6px} .anchor p:last-child{margin:0}
+  .tag{font-family:var(--mono); font-size:11px; letter-spacing:.04em; color:var(--muted); text-transform:uppercase; margin-right:6px}
+
+  /* ---------- leaderboard (two ranked columns) ---------- */
+  .board{display:grid; grid-template-columns:1fr 1fr; gap:24px}
+  .board h3{
+    font-family:var(--mono); font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; margin:0 0 6px; color:var(--ink);
+  }
+  .rank{font-family:var(--mono); color:var(--muted); width:2ch}
+
+  /* ---------- watch items ---------- */
+  ol.watch{margin:0; padding:0; list-style:none; counter-reset:w}
+  ol.watch li{
+    position:relative; padding:12px 0 12px 34px; border-bottom:1px solid var(--line);
+  }
+  ol.watch li:last-child{border-bottom:0}
+  ol.watch li::before{
+    counter-increment:w; content:counter(w);
+    position:absolute; left:0; top:12px;
+    font-family:var(--mono); font-size:12px; font-weight:600; color:var(--accent);
+  }
+
+  /* ---------- sources footer ---------- */
+  footer{
+    margin-top:40px; padding-top:20px; border-top:2px solid var(--ink);
+    font-family:var(--mono); font-size:12px; color:var(--muted);
+  }
+  footer h4{
+    font-size:11px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--ink); margin:0 0 10px;
+  }
+  footer ul{margin:0; padding:0; list-style:none; display:grid; gap:5px}
+  .disclaimer{margin-top:18px; font-style:italic; line-height:1.5}
+
+  a{color:var(--accent); text-decoration:none; border-bottom:1px solid transparent}
+  a:hover{border-bottom-color:var(--accent)}
+  a:focus-visible{outline:2px solid var(--accent); outline-offset:2px}
+
+  @media (max-width:680px){
+    .wrap{padding:0 16px 56px}
+    h1{font-size:24px}
+    .macro{grid-template-columns:1fr}
+    section{grid-template-columns:1fr; gap:0}
+    .num{padding:0 0 6px}
+    section > .body{grid-column:1}
+    .board{grid-template-columns:1fr}
+  }
+  @media print{ body{font-size:11pt} a{color:var(--ink)} .macro .cell{background:#fff} }
+  @media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+
+<div class="wrap">
+
+  <header>
+    <p class="eyebrow">Weekly Brief · Stabilized Portfolio</p>
+    <h1>Weekly CRE Market Brief — 2026-11-15</h1><!-- FILL: date -->
+    <div class="meta">
+      <span>Coverage window <b>Nov 09 – Nov 15, 2026</b></span><!-- FILL: window -->
+      <span>Generated <b>2026-11-15 08:11 PT</b></span><!-- FILL: timestamp -->
+    </div>
+  </header>
+
+  <!-- ===== MACRO STRIP (hero) — FILL: 3 macro cells ===== -->
+  <div class="macro">
+    <div class="cell">
+      <p class="k">10-Yr Treasury</p>
+      <div class="v">4.88%</div>
+      <div class="sub"><span class="chip down">−22 bps</span> vs 10-15 · as of 11-09</div>
+    </div>
+    <div class="cell">
+      <p class="k">Fed / Rate Outlook</p>
+      <div class="v">Hold · Dec hike ~77–80%</div>
+      <div class="sub">3.75–4.00% · odds after jobs data · 11-06</div>
+    </div>
+    <div class="cell">
+      <p class="k">CRE Debt / Cap Rates</p>
+      <div class="v">Spread tight</div>
+      <div class="sub">cap–UST spread squeezed 17 qtrs · Q3'26</div>
+    </div>
+  </div>
+
+  <!-- ===== SECTION 1 ===== -->
+  <section>
+    <div class="num">01</div>
+    <div class="body">
+      <h2>Capital markets &amp; macro</h2>
+      <!-- FILL: one short paragraph -->
+      <p class="lede">The 10-year Treasury eased to 4.88% on 11-09 (4.84–4.86% on 11-05/06), down about 22 bps from 5.10% in mid-October and off early-October levels above 5.25%. Policy risk points the other way: October payrolls came in at +165k (nearly 3× consensus) with unemployment at 4.1%. Futures now price roughly a 77–80% chance of a 25 bp hike at the Dec 8–9 FOMC, up from ~67–72%. The Fed held at 3.75–4.00% on 10-28. Freddie Mac's 30-yr rate was 7.18% (wk of 11-05, carried). In apartment capital markets, IPA describes the Q3 sales recovery as slow and uneven, with the cap-rate spread over Treasuries squeezed for 17 straight quarters. NMHC's Q3 sales-volume index read 46 (below 50 = lower volume). Small-multifamily cap rates averaged 6.0% in Q2 (5.8% in Q1). Headline annual apartment sales of $208.1B are inflated by the AvalonBay–Equity Residential merger, and deal count is down. <span class="src">Sources: FRED/YCharts 11-09; BLS/CME via InvestmentNews 11-06; IPA, NMHC Q3'26; Arbor/Chandan Q2'26</span></p>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 2 ===== -->
+  <section>
+    <div class="num">02</div>
+    <div class="body">
+      <h2>Multifamily — by metro</h2>
+      <table>
+        <caption>Rent = YoY, all-unit basis unless noted. <b>Bold</b> = held market. National (Apartment List, Oct data): median $1,384, <span class="chip up">+0.1%</span> YoY, the first positive annual reading since mid-2023. Metro tables for October data didn't appear in search snippets, so metro rents below are carried from earlier releases.</caption>
+        <thead>
+          <tr><th>Metro</th><th class="r">Rent YoY</th><th class="r">Occupancy</th><th>Supply / deliveries</th><th>Note</th><th class="r">Source</th></tr>
+        </thead>
+        <tbody>
+          <!-- FILL: one <tr> per metro; add class="held" for owned metros -->
+          <tr class="held"><td>Dallas</td><td class="r num-cell"><span class="chip down">−2.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">91.1% <span class="stale">as of 08-data</span></td><td>H1'26 absorption ~20–25k vs ~13k delivered; 43.3k u/c, ~24.1k due next 12 mo <span class="chip flag">Oversupply</span></td><td>Demand outrunning deliveries; Matthews Q3 vac 6.1%, rent +0.2%. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList 09-27 (carried fwd); Transwestern/Northmarq Q2'26</td></tr>
+          <tr class="held"><td>Houston</td><td class="r num-cell"><span class="chip down">−2.2%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">91.6% <span class="stale">as of 08-data</span></td><td>Q3 TTM net absorption 9,548 (vs 6,976 Q2)</td><td>Vacancy steady. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList 09-27 (carried fwd); Lee Q3'26</td></tr>
+          <tr class="held"><td>Indianapolis</td><td class="r num-cell"><span class="chip down">−0.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>~2,100 deliveries in 2026 (+1.1% inventory)</td><td>Apts.com Sept +1.0% YoY. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList 09-27 (carried fwd); M&amp;M</td></tr>
+          <tr class="held"><td>Columbus (Hilliard)</td><td class="r num-cell"><span class="chip down">−0.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>Moderate</td><td>Columbus MSA figure. <b>Hilliard note:</b> Tempo (359 u) in lease-up since ~Feb '26; Gables West (184 u) sold $22.5M to CMHA. No new Hilliard item this week.</td><td class="r src">AptList 09-27 (carried fwd); MHN/CoStar</td></tr>
+          <tr class="held"><td>Charlotte (Matthews)</td><td class="r num-cell"><span class="chip down">−2.5%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">90.8% <span class="stale">as of 08-data</span></td><td>TTM completions 9,284 (−45%) <span class="chip flag">Oversupply</span></td><td>Charlotte MSA figure. Matthews Q3: vac 6.0%, rent −0.4%. Latest txn: Belmont Heights 176 u, &gt;$31M (04-20). No Matthews-submarket item this week.</td><td class="r src">AptList 09-27 (carried fwd); Matthews Q3'26; CoStar</td></tr>
+          <tr><td>Austin</td><td class="r num-cell"><span class="chip down">−2.3%</span></td><td class="r num-cell">91.0%</td><td>Vac 9.0% vs 6.8% national; &gt;half of units offer &gt;1 mo free <span class="chip flag">Oversupply</span></td><td>Concessions on 37% of stabilized units (highest of top 50), avg 15.2%; RealPage Q2 +1.3% QoQ, the first gain since 2022</td><td class="r src">AptList Sept data; RealPage Q2'26</td></tr>
+          <tr><td>San Antonio</td><td class="r num-cell"><span class="chip down">−5.1%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>~2,600 units in 2026 (−63% YoY, slowest since 2011) <span class="chip flag">Oversupply</span></td><td>Q1 sales: median $132.6k/unit, ~6.0% cap, some forced sales; MHN Oct: oversupply persists near term</td><td class="r src">AptList 09-27 (carried fwd); Northmarq; MHN 10-2026</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 3 ===== -->
+  <section>
+    <div class="num">03</div>
+    <div class="body">
+      <h2>Student housing — by university market</h2>
+
+      <!-- FILL: national anchor — aggregate pre-lease pace (this is the quantitative
+           anchor; keep even when campus rows are light). One line per aggregate source. -->
+      <div class="anchor">
+        <p><b>National pace (RealPage, Fall 2026 final):</b> 95.9% pre-leased as of Aug, second only to the 96.5% record. Fall 2027 cycle readings had not surfaced yet. <span class="src">as of 08-2026</span> <span class="stale">as of 08-31</span></p>
+        <p><b>National pace (Yardi, 200 schools):</b> 93% pre-leased in Aug, +0.8 pp vs Aug 2025 final; Sept prelim occupancy 94.5%. Yardi's Oct report expects fall occupancy to finish below 2025. 2026-27 rent growth +1.1% (vs +2.8% PY); enrollment +0.6% at 38 reporting schools; 18,500 beds under construction. <span class="chip up">+0.8 pp</span> <span class="src">Yardi Matrix 10-2026</span></p>
+      </div>
+
+      <table>
+        <caption>Per-campus signal this week — lead with what's findable: new competitive
+        supply near campus, enrollment news, or pre-lease % where published.
+        <span class="chip flag">Supply</span> = new beds / oversupply risk.</caption>
+        <thead>
+          <tr><th>Campus</th><th>What's new near campus this week</th><th class="r">Source</th></tr>
+        </thead>
+        <tbody>
+          <!-- FILL: one row per campus. Priority for the cell: new supply > enrollment
+               news > pre-lease % if surfaced. Tag supply risk with the flag chip; use
+               the .tag label to mark the signal type. "n/a this week" is the EXCEPTION,
+               only when nothing at all surfaced for that campus. -->
+          <tr><td>UT Austin</td><td><span class="tag">Supply</span> No new West Campus delivery surfaced. The 2025 towers (Icon 555 beds, Villas 670 beds) are still being absorbed. Separately, Austin's conventional market (9% vacancy, &gt;1 month free at over half of units) gives students a cheaper alternative.</td><td class="r src">MHN/GSL 2025 (carried); AptList Sept</td></tr>
+          <tr><td>Georgia State (GSU)</td><td><span class="tag">Enroll</span> Record fall enrollment of 54,320 (+1.24%). No new downtown supply surfaced.</td><td class="r src">Atlanta News First 10-14 (carried)</td></tr>
+          <tr><td>UTSA</td><td><span class="tag">Enroll</span> 38,200+ students in fall 2025 (+7%); &gt;2,700 beds added near downtown since 2019. San Antonio conventional rents are falling (separate asset class).</td><td class="r src">UTSA (carried) <span class="stale">as of 2025</span></td></tr>
+          <tr><td>UC Santa Barbara</td><td><span class="chip flag">Supply</span> San Benito (~2,100 on-campus beds) targeted for fall 2027. No new Isla Vista item this week.</td><td class="r src">UCSB (carried)</td></tr>
+          <tr><td>Univ. of Florida</td><td><span class="chip flag">Supply</span> Zaya (703 beds, SW 20th Ave) is leasing; Chapter House UF (684 beds, SW Depot Ave) broke ground; the 2,217-bed on-campus redevelopment is under construction. Near-term deliveries are thin, though (~705 beds next AY), against 50k+ students living off campus.</td><td class="r src">REBusiness / MHN / JLL 2026</td></tr>
+          <tr><td>Michigan</td><td><span class="chip flag">Supply</span> U-M Central Campus project: 5 halls, 2,300 beds. Rambler Ann Arbor (1,009 beds) is planned across from campus, and Chapter Ann Arbor (625 beds) is due before 2027-28.</td><td class="r src">BDC / REBusiness (undated)</td></tr>
+          <tr><td>Alabama</td><td><span class="tag">Supply</span> The Walk (251 beds) has opened, and Greystar bought a site for a $70M project. Tuscaloosa still has one of the smallest SEC pipelines.</td><td class="r src">REBusiness / JLL (carried)</td></tr>
+          <tr><td>USC-Columbia</td><td><span class="tag">Enroll</span> Fall 2026 Columbia enrollment ~41,650 (+2.5%). The $210M ~1,800-bed project is slipping, and a 504-bed near-campus asset is 99% pre-leased for AY26/27.</td><td class="r src">USC 09-2026 (carried)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 4 ===== -->
+  <section>
+    <div class="num">04</div>
+    <div class="body">
+      <h2>Hotels</h2>
+      <table>
+        <caption>Week trend vs. prior week / prior year as reported. US (CoStar, wk ending 10-31): RevPAR $101.88 <span class="chip up">+9.7%</span>, ADR $164.95 <span class="chip up">+5.2%</span>, occ 61.8% <span class="chip up">+4.3%</span>; 20 of the Top 25 markets had RevPAR gains.</caption>
+        <thead>
+          <tr><th>Market</th><th class="r">RevPAR</th><th class="r">ADR</th><th class="r">Occupancy</th><th>Demand driver</th><th class="r">Source</th></tr>
+        </thead>
+        <tbody>
+          <!-- FILL: one <tr> per hotel market -->
+          <tr><td>LA / Burbank</td><td class="r num-cell"><span class="chip up">+31.5%</span> <span class="stale">as of Q1</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">74.6% <span class="stale">as of Q1</span></td><td>Post-fire rebound and World Cup lift; HVS forecasts 2026 RevPAR +4.5% and expects H2 to fade; CoStar called summer demand "cooling." No Burbank-specific data.</td><td class="r src">Pebblebrook/CoStar Q1'26; HVS</td></tr>
+          <tr><td>Austin</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>Occupancy is still declining but more slowly; ADR/RevPAR are among the highest in Texas. New supply: 1 Hotel Austin Waterline (252 rooms) opened Sept. Convention center closed for rebuild.</td><td class="r src">M&amp;M Q1'26; Lodging Dev. 10-2026</td></tr>
+          <tr><td>Oklahoma City</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">—</td><td class="r num-cell">—</td><td>No reliable 2026 figure. The last credible read (Newmark 1Q25) showed occupancy slightly down YoY.</td><td class="r src">Newmark <span class="stale">as of 1Q25</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ===== SECTION 5 ===== -->
+  <section>
+    <div class="num">05</div>
+    <div class="body">
+      <h2>Watch items</h2>
+      <ol class="watch">
+        <!-- FILL: 3–5 <li> -->
+        <li>Dec 8–9 FOMC: hike odds are ~77–80% after the strong October jobs report. The November jobs report (Dec 4) is the last major input. The 10-yr has eased to ~4.88% anyway, so the long end and the policy rate are moving in opposite directions.</li>
+        <li>National rents turned positive YoY (+0.1%, Apartment List Oct data) for the first time since mid-2023. Watch whether Sun Belt held metros follow or lag through the winter off-season.</li>
+        <li>Texas supply runoff: San Antonio's 2026 deliveries are down ~63% and Dallas absorption exceeds deliveries, but Austin and San Antonio concessions are still deep (Austin: 37% of units, ~15% average discount).</li>
+        <li>Student housing: Yardi expects fall occupancy below 2025 and slower rent growth (+1.1%), with 18,500 beds under construction. Gainesville and Ann Arbor have the most visible new near-campus pipelines.</li>
+        <li>Hotel momentum: national RevPAR is up ~10% YoY in late October against soft November 2025 comps, but market-level reads for Austin, LA/Burbank and OKC are missing.</li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===== LEADERBOARD ===== -->
+  <section>
+    <div class="num">06</div>
+    <div class="body">
+      <h2>Metro leaderboard — YoY multifamily rent growth</h2>
+      <p><span class="stale">Partial, carried fwd:</span> Apartment List's October-data metro table didn't appear in search snippets, so ranks are carried from last week. Bottom 10 is Apartment List August data (all-unit). Top ranks fill gaps from Zillow and Apartments.com (basis tagged). Unfilled ranks are marked n/a.</p>
+      <div class="board">
+        <div>
+          <h3>Top 10</h3>
+          <table>
+            <thead><tr><th class="rank">#</th><th>Metro</th><th class="r">YoY</th></tr></thead>
+            <tbody>
+              <!-- FILL: ranks 1–10; class="held" for owned metros -->
+              <tr><td class="rank">1</td><td>San Francisco <span class="src">Zillow Aug</span></td><td class="r num-cell"><span class="chip up">+11.7%</span></td></tr>
+              <tr><td class="rank">2</td><td>San Jose <span class="src">Zillow Aug</span></td><td class="r num-cell"><span class="chip up">+8.0%</span></td></tr>
+              <tr><td class="rank">3</td><td>Norfolk / Va Beach <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+5.8%</span></td></tr>
+              <tr><td class="rank">4</td><td>East Bay <span class="src">Zillow Aug</span></td><td class="r num-cell"><span class="chip up">+5.4%</span></td></tr>
+              <tr><td class="rank">5–10</td><td><span class="na">n/a this week</span></td><td class="r num-cell">—</td></tr>
+              <tr class="held"><td class="rank">—</td><td>Columbus <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+1.2%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Atlanta <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+1.1%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Indianapolis <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+1.0%</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <h3>Bottom 10</h3>
+          <table>
+            <thead><tr><th class="rank">#</th><th>Metro</th><th class="r">YoY</th></tr></thead>
+            <tbody>
+              <!-- FILL: ranks 1–10 from the bottom -->
+              <tr class="held"><td class="rank">1</td><td>San Antonio</td><td class="r num-cell"><span class="chip down">−5.1%</span></td></tr>
+              <tr><td class="rank">2</td><td>Las Vegas</td><td class="r num-cell"><span class="chip down">−3.6%</span></td></tr>
+              <tr><td class="rank">3</td><td>Denver</td><td class="r num-cell"><span class="chip down">−3.4%</span></td></tr>
+              <tr class="held"><td class="rank">4</td><td>Austin <span class="src">Sept: −2.3%</span></td><td class="r num-cell"><span class="chip down">−2.9%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Charlotte</td><td class="r num-cell"><span class="chip down">−2.5%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Dallas</td><td class="r num-cell"><span class="chip down">−2.3%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Houston</td><td class="r num-cell"><span class="chip down">−2.2%</span></td></tr>
+              <tr><td class="rank">—</td><td>Phoenix</td><td class="r num-cell"><span class="na">n/a this week</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <h4>Sources</h4>
+    <ul>
+      <!-- FILL: one <li> per source with date pulled -->
+      <li>Apartment List National Rent Report — Oct data (national), via CRE Daily, pulled 2026-11-15 (all-unit basis); metro data carried fwd from Aug-data release 2026-09-27; Austin Sept data</li>
+      <li>FRED DGS10 / YCharts — 10-yr UST through 2026-11-09</li>
+      <li>BLS Oct jobs report + CME FedWatch / LSEG via InvestmentNews, primerates — 2026-11-06; FOMC hold 2026-10-28</li>
+      <li>IPA, NMHC quarterly survey — Q3 2026; Arbor/Chandan small-MF — Q2 2026</li>
+      <li>Transwestern, Northmarq, CoStar (DFW) — Q2 2026; Matthews, Lee &amp; Associates — Q3 2026 (carried)</li>
+      <li>Northmarq San Antonio; Multi-Housing News SA report — 10-2026; RealPage Austin Q2 2026</li>
+      <li>RealPage student pre-lease — 08-2026; Yardi Matrix national student housing report — 10-2026</li>
+      <li>REBusiness, MHN, JLL, BDC, university releases — campus items (dates per row)</li>
+      <li>CoStar US weekly hotel results — wk ending 2026-10-31 (pub 11-05); Pebblebrook/HVS (LA); M&amp;M, Lodging Development (Austin); Newmark (OKC 1Q25)</li>
+    </ul>
+    <p class="disclaimer">Informational market briefing only. Describes observed trends; not
+    investment advice and not a recommendation to buy, sell, or hold any asset.</p>
+  </footer>
+
+</div>
