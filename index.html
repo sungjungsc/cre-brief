@@ -3,7 +3,7 @@
   ------------------------------------------------------------------
   How the scheduled task uses this file:
    1. Phase 2 clones this file to index.html (and archive/cre-brief-YYYY-MM-DD.html)
-   2. Fills the zones marked  <!-- FILL: ... -->  with real content
+   2. Fills the zones marked with FILL: comment markers with real content
    3. Leaves the CSS in <style> untouched so every week looks identical
   Reusable components (copy the pattern, don't restyle):
    - Delta chip:   <span class="chip up">+0.4%</span>  |  .down  |  .flat
@@ -32,7 +32,7 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Weekly CRE Market Brief — 2026-11-15</title><!-- FILL: date -->
+<title>Weekly CRE Market Brief — 2026-11-22</title><!-- FILL: date -->
 <style>
   :root{
     --ink:#14181f; --paper:#ffffff; --panel:#f4f6f8; --panel-2:#eef1f5;
@@ -180,10 +180,10 @@
 
   <header>
     <p class="eyebrow">Weekly Brief · Stabilized Portfolio</p>
-    <h1>Weekly CRE Market Brief — 2026-11-15</h1><!-- FILL: date -->
+    <h1>Weekly CRE Market Brief — 2026-11-22</h1><!-- FILL: date -->
     <div class="meta">
-      <span>Coverage window <b>Nov 09 – Nov 15, 2026</b></span><!-- FILL: window -->
-      <span>Generated <b>2026-11-15 08:11 PT</b></span><!-- FILL: timestamp -->
+      <span>Coverage window <b>Nov 16 – Nov 22, 2026</b></span><!-- FILL: window -->
+      <span>Generated <b>2026-11-22 08:10 PT</b></span><!-- FILL: timestamp -->
     </div>
   </header>
 
@@ -191,18 +191,18 @@
   <div class="macro">
     <div class="cell">
       <p class="k">10-Yr Treasury</p>
-      <div class="v">4.88%</div>
-      <div class="sub"><span class="chip down">−22 bps</span> vs 10-15 · as of 11-09</div>
+      <div class="v">5.05%</div>
+      <div class="sub"><span class="chip up">+17 bps</span> vs 11-09 · as of 11-19</div>
     </div>
     <div class="cell">
       <p class="k">Fed / Rate Outlook</p>
-      <div class="v">Hold · Dec hike ~77–80%</div>
-      <div class="sub">3.75–4.00% · odds after jobs data · 11-06</div>
+      <div class="v">3.75–4.00%</div>
+      <div class="sub">Dec hike ~fully priced after hot Oct CPI · FOMC 12-08/09</div>
     </div>
     <div class="cell">
       <p class="k">CRE Debt / Cap Rates</p>
-      <div class="v">Spread tight</div>
-      <div class="sub">cap–UST spread squeezed 17 qtrs · Q3'26</div>
+      <div class="v">~6.0%</div>
+      <div class="sub">small-MF cap; CMBS cap ≈ coupon <span class="stale">as of Q2</span></div>
     </div>
   </div>
 
@@ -212,7 +212,7 @@
     <div class="body">
       <h2>Capital markets &amp; macro</h2>
       <!-- FILL: one short paragraph -->
-      <p class="lede">The 10-year Treasury eased to 4.88% on 11-09 (4.84–4.86% on 11-05/06), down about 22 bps from 5.10% in mid-October and off early-October levels above 5.25%. Policy risk points the other way: October payrolls came in at +165k (nearly 3× consensus) with unemployment at 4.1%. Futures now price roughly a 77–80% chance of a 25 bp hike at the Dec 8–9 FOMC, up from ~67–72%. The Fed held at 3.75–4.00% on 10-28. Freddie Mac's 30-yr rate was 7.18% (wk of 11-05, carried). In apartment capital markets, IPA describes the Q3 sales recovery as slow and uneven, with the cap-rate spread over Treasuries squeezed for 17 straight quarters. NMHC's Q3 sales-volume index read 46 (below 50 = lower volume). Small-multifamily cap rates averaged 6.0% in Q2 (5.8% in Q1). Headline annual apartment sales of $208.1B are inflated by the AvalonBay–Equity Residential merger, and deal count is down. <span class="src">Sources: FRED/YCharts 11-09; BLS/CME via InvestmentNews 11-06; IPA, NMHC Q3'26; Arbor/Chandan Q2'26</span></p>
+      <p class="lede">The 10-year Treasury closed at 5.051% on 11-19, its fourth straight down day, but still about 17 bps above the 4.88% in last week's brief. It was 4.98% on 11-10 and roughly 5.15% on 11-13 (snippet est.); the 52-week high is 5.31% (10-05). The move came from October CPI: headline <span class="chip up">+0.4%</span> MoM against ~0.3% expected, and core +0.3% for a third straight month. BLS published no YoY figure because of the Oct-2025 shutdown gap. Fed Governor Waller said a 50 bp hike should be considered. CME FedWatch now prices a December hike to 4.00–4.25% as near-certain, with about 14% odds of 50 bps. The funds rate is 3.75–4.00% after the 10-28 hold, where two members dissented in favor of a hike. On the CRE side, Q3 multifamily sales were $32.9B, +30.8% QoQ and −10.5% YoY (NAA), and small-multifamily lending is running at a $79.1B annualized pace, up 6% (Arbor/CRE Daily). Cap rates are still near 6% (small MF, Q2). CMBS cap rates sit roughly level with loan coupons, so leverage is thin; agency debt averages 4.98% vs 6.44% for conduit. RealPage national occupancy held at 95.4% in Q3. <span class="src">Sources: DJ/Morningstar 11-19; InvestmentNews/NMN/Continuum mid-Nov; NAA Q3; CRE Daily Q3; CRED iQ <span class="stale">as of 06-16</span></span></p>
     </div>
   </section>
 
@@ -222,19 +222,19 @@
     <div class="body">
       <h2>Multifamily — by metro</h2>
       <table>
-        <caption>Rent = YoY, all-unit basis unless noted. <b>Bold</b> = held market. National (Apartment List, Oct data): median $1,384, <span class="chip up">+0.1%</span> YoY, the first positive annual reading since mid-2023. Metro tables for October data didn't appear in search snippets, so metro rents below are carried from earlier releases.</caption>
+        <caption>Rent = YoY, Apartment List all-unit basis unless noted. Occupancy = 100 − broker-reported vacancy. <b>Bold</b> = held market. National (Apartment List, Oct data): <span class="chip up">+0.1%</span> YoY, first positive reading since 2023. Rents fell MoM in 45 of 55 large metros, but 35 are up YoY. Apartment List's November-data report is due early December. Metro values that didn't surface in snippets are carried fwd.</caption>
         <thead>
           <tr><th>Metro</th><th class="r">Rent YoY</th><th class="r">Occupancy</th><th>Supply / deliveries</th><th>Note</th><th class="r">Source</th></tr>
         </thead>
         <tbody>
           <!-- FILL: one <tr> per metro; add class="held" for owned metros -->
-          <tr class="held"><td>Dallas</td><td class="r num-cell"><span class="chip down">−2.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">91.1% <span class="stale">as of 08-data</span></td><td>H1'26 absorption ~20–25k vs ~13k delivered; 43.3k u/c, ~24.1k due next 12 mo <span class="chip flag">Oversupply</span></td><td>Demand outrunning deliveries; Matthews Q3 vac 6.1%, rent +0.2%. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList 09-27 (carried fwd); Transwestern/Northmarq Q2'26</td></tr>
-          <tr class="held"><td>Houston</td><td class="r num-cell"><span class="chip down">−2.2%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">91.6% <span class="stale">as of 08-data</span></td><td>Q3 TTM net absorption 9,548 (vs 6,976 Q2)</td><td>Vacancy steady. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList 09-27 (carried fwd); Lee Q3'26</td></tr>
-          <tr class="held"><td>Indianapolis</td><td class="r num-cell"><span class="chip down">−0.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>~2,100 deliveries in 2026 (+1.1% inventory)</td><td>Apts.com Sept +1.0% YoY. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList 09-27 (carried fwd); M&amp;M</td></tr>
-          <tr class="held"><td>Columbus (Hilliard)</td><td class="r num-cell"><span class="chip down">−0.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>Moderate</td><td>Columbus MSA figure. <b>Hilliard note:</b> Tempo (359 u) in lease-up since ~Feb '26; Gables West (184 u) sold $22.5M to CMHA. No new Hilliard item this week.</td><td class="r src">AptList 09-27 (carried fwd); MHN/CoStar</td></tr>
-          <tr class="held"><td>Charlotte (Matthews)</td><td class="r num-cell"><span class="chip down">−2.5%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">90.8% <span class="stale">as of 08-data</span></td><td>TTM completions 9,284 (−45%) <span class="chip flag">Oversupply</span></td><td>Charlotte MSA figure. Matthews Q3: vac 6.0%, rent −0.4%. Latest txn: Belmont Heights 176 u, &gt;$31M (04-20). No Matthews-submarket item this week.</td><td class="r src">AptList 09-27 (carried fwd); Matthews Q3'26; CoStar</td></tr>
-          <tr><td>Austin</td><td class="r num-cell"><span class="chip down">−2.3%</span></td><td class="r num-cell">91.0%</td><td>Vac 9.0% vs 6.8% national; &gt;half of units offer &gt;1 mo free <span class="chip flag">Oversupply</span></td><td>Concessions on 37% of stabilized units (highest of top 50), avg 15.2%; RealPage Q2 +1.3% QoQ, the first gain since 2022</td><td class="r src">AptList Sept data; RealPage Q2'26</td></tr>
-          <tr><td>San Antonio</td><td class="r num-cell"><span class="chip down">−5.1%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>~2,600 units in 2026 (−63% YoY, slowest since 2011) <span class="chip flag">Oversupply</span></td><td>Q1 sales: median $132.6k/unit, ~6.0% cap, some forced sales; MHN Oct: oversupply persists near term</td><td class="r src">AptList 09-27 (carried fwd); Northmarq; MHN 10-2026</td></tr>
+          <tr class="held"><td>Dallas</td><td class="r num-cell"><span class="chip down">−2.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">93.8% <span class="stale">as of Q2</span></td><td>Colliers Q3: absorption 7,049 u (~2x prior pace), seen tripling by Q3'27; 25,933 deliveries due through Q3'27; pipeline down to 20,087 u <span class="chip flag">Oversupply</span></td><td>Oversupply easing as demand outruns new deliveries. Matthews Q2 vac 6.21% (+35 bps YoY). Txn: <span class="na">n/a this week</span></td><td class="r src">AptList (carried fwd);<br>Colliers Q3 via CRE Daily;<br>Matthews Q2</td></tr>
+          <tr class="held"><td>Houston</td><td class="r num-cell"><span class="chip down">−2.2%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">93.7%</td><td>Q3 absorption 2,971; TTM completions 11,975; TTM absorption 9,548</td><td>Matthews Q3: avg rent $1,329 (−0.7%); Yardi Oct −1.5% (2nd weakest of top 30). Sales: $5.2B TTM, $1.15B in Q3, 6.24% avg cap</td><td class="r src">AptList (carried fwd);<br>Matthews/Lee Q3'26;<br>Yardi Oct</td></tr>
+          <tr class="held"><td>Indianapolis</td><td class="r num-cell"><span class="chip down">−0.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>~2,100 deliveries in 2026</td><td>Midwest brief: annual rent roughly flat. Txn: <span class="na">n/a this week</span></td><td class="r src">AptList (carried fwd);<br>M&amp;M;<br>CRE Daily</td></tr>
+          <tr class="held"><td>Columbus (Hilliard)</td><td class="r num-cell"><span class="chip down">−0.3%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">95.5% <span class="stale">as of Q2</span></td><td>Inventory growth 3.3%, highest in the Midwest</td><td>Columbus MSA figure. Q2 eff. rent +0.6% to $1,418; Q2 sales $365M. <b>Hilliard note:</b> no new item this week. Tempo (359 u) still in lease-up; Gables West (184 u) sold for $22.5M to CMHA (carried).</td><td class="r src">AptList (carried fwd);<br>CRE Daily Q2'26</td></tr>
+          <tr class="held"><td>Charlotte (Matthews)</td><td class="r num-cell"><span class="chip down">−2.5%</span> <span class="stale">as of 08-data</span></td><td class="r num-cell">94.0%</td><td>Q3 absorption 1,233; Northmarq expects vacancy to hold steady through YE26 as supply ebbs <span class="chip flag">Oversupply</span></td><td>Charlotte MSA figure. Matthews Q3 avg rent $1,547 (−0.4%); TTM sales $2.5B (−32%), $219k/unit. Txn: Pavillion Village, 294 u, $56.75M (JLL, 09-24). No Matthews-submarket item this week.</td><td class="r src">AptList (carried fwd);<br>Matthews Q3'26;<br>JLL</td></tr>
+          <tr><td>Austin</td><td class="r num-cell"><span class="chip down">−2.9%</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>2026 deliveries ~4,600 u (−74% vs 2025), after ~97k units added 2020–Q2'26 <span class="chip flag">Oversupply</span></td><td>Yardi Oct −1.7%, steepest of its top 30. Concessions on 37% of stabilized units, avg 15.2%. Q2 eff. rent +1.3–1.8% QoQ, the first gain after 12 quarters.</td><td class="r src">AptList Sept data;<br>Yardi Oct;<br>CoStar;<br>RealPage</td></tr>
+          <tr><td>San Antonio</td><td class="r num-cell"><span class="chip down">−3.8%</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>Highest MF vacancy nationally since mid-2025; 3 submarkets have nothing under construction <span class="chip flag">Oversupply</span></td><td>Weakest large metro on Apartment List (Oct data). C&amp;W Q3 eff. rent $1,148 (−3.5%, the smallest decline since Q1'25). Matthews: investment capital −38%, rents 8% below the 2022 peak. Local experts see a supply shortage possible by late 2027.</td><td class="r src">AptList Oct data;<br>C&amp;W Q3;<br>Matthews Q3;<br>TPR 09-14</td></tr>
         </tbody>
       </table>
     </div>
@@ -249,8 +249,8 @@
       <!-- FILL: national anchor — aggregate pre-lease pace (this is the quantitative
            anchor; keep even when campus rows are light). One line per aggregate source. -->
       <div class="anchor">
-        <p><b>National pace (RealPage, Fall 2026 final):</b> 95.9% pre-leased as of Aug, second only to the 96.5% record. Fall 2027 cycle readings had not surfaced yet. <span class="src">as of 08-2026</span> <span class="stale">as of 08-31</span></p>
-        <p><b>National pace (Yardi, 200 schools):</b> 93% pre-leased in Aug, +0.8 pp vs Aug 2025 final; Sept prelim occupancy 94.5%. Yardi's Oct report expects fall occupancy to finish below 2025. 2026-27 rent growth +1.1% (vs +2.8% PY); enrollment +0.6% at 38 reporting schools; 18,500 beds under construction. <span class="chip up">+0.8 pp</span> <span class="src">Yardi Matrix 10-2026</span></p>
+        <p><b>National pace (RealPage, Fall 2027):</b> 3.8% pre-leased as of Oct (3.9% Sept) vs 3.2% at this point last cycle <span class="chip up">+0.6 pp</span>, but well behind 7.1% (Fall '25) and 10.6% (Fall '24). The usual October jump of 5–6 pts didn't come. Beds more than 1 mile from campus rose to 2.4%. Fall 2026 finished at 95.9%. <span class="src">RealPage via CRE Daily, Oct data</span></p>
+        <p><b>National pace (Yardi, 200 schools):</b> no Fall 2027 reading yet (<span class="na">n/a this week</span>). Last print: Aug pre-lease 93% for 2026-27; rent growth ~1%; fall occupancy expected below 2025; 18,500 beds under construction; ~34.0k beds forecast for 2026. <span class="stale">as of 10-2026</span></p>
       </div>
 
       <table>
@@ -261,18 +261,15 @@
           <tr><th>Campus</th><th>What's new near campus this week</th><th class="r">Source</th></tr>
         </thead>
         <tbody>
-          <!-- FILL: one row per campus. Priority for the cell: new supply > enrollment
-               news > pre-lease % if surfaced. Tag supply risk with the flag chip; use
-               the .tag label to mark the signal type. "n/a this week" is the EXCEPTION,
-               only when nothing at all surfaced for that campus. -->
-          <tr><td>UT Austin</td><td><span class="tag">Supply</span> No new West Campus delivery surfaced. The 2025 towers (Icon 555 beds, Villas 670 beds) are still being absorbed. Separately, Austin's conventional market (9% vacancy, &gt;1 month free at over half of units) gives students a cheaper alternative.</td><td class="r src">MHN/GSL 2025 (carried); AptList Sept</td></tr>
-          <tr><td>Georgia State (GSU)</td><td><span class="tag">Enroll</span> Record fall enrollment of 54,320 (+1.24%). No new downtown supply surfaced.</td><td class="r src">Atlanta News First 10-14 (carried)</td></tr>
-          <tr><td>UTSA</td><td><span class="tag">Enroll</span> 38,200+ students in fall 2025 (+7%); &gt;2,700 beds added near downtown since 2019. San Antonio conventional rents are falling (separate asset class).</td><td class="r src">UTSA (carried) <span class="stale">as of 2025</span></td></tr>
-          <tr><td>UC Santa Barbara</td><td><span class="chip flag">Supply</span> San Benito (~2,100 on-campus beds) targeted for fall 2027. No new Isla Vista item this week.</td><td class="r src">UCSB (carried)</td></tr>
-          <tr><td>Univ. of Florida</td><td><span class="chip flag">Supply</span> Zaya (703 beds, SW 20th Ave) is leasing; Chapter House UF (684 beds, SW Depot Ave) broke ground; the 2,217-bed on-campus redevelopment is under construction. Near-term deliveries are thin, though (~705 beds next AY), against 50k+ students living off campus.</td><td class="r src">REBusiness / MHN / JLL 2026</td></tr>
-          <tr><td>Michigan</td><td><span class="chip flag">Supply</span> U-M Central Campus project: 5 halls, 2,300 beds. Rambler Ann Arbor (1,009 beds) is planned across from campus, and Chapter Ann Arbor (625 beds) is due before 2027-28.</td><td class="r src">BDC / REBusiness (undated)</td></tr>
-          <tr><td>Alabama</td><td><span class="tag">Supply</span> The Walk (251 beds) has opened, and Greystar bought a site for a $70M project. Tuscaloosa still has one of the smallest SEC pipelines.</td><td class="r src">REBusiness / JLL (carried)</td></tr>
-          <tr><td>USC-Columbia</td><td><span class="tag">Enroll</span> Fall 2026 Columbia enrollment ~41,650 (+2.5%). The $210M ~1,800-bed project is slipping, and a 504-bed near-campus asset is 99% pre-leased for AY26/27.</td><td class="r src">USC 09-2026 (carried)</td></tr>
+          <!-- FILL: one row per campus. -->
+          <tr><td>UT Austin</td><td><span class="chip flag">Supply</span> Greystar's UT Law School Village closed financing and started construction in May '26. Balfour Beatty is building the Whitis Ave residence hall, the first new on-campus hall in ~20 years. Icon (555 beds) and Villas (670) in West Campus delivered 2025. The Austin conventional market is concession-heavy (see §2), a competing option for students.</td><td class="r src">Greystar/UT <span class="stale">as of 05-2026</span></td></tr>
+          <tr><td>Georgia State (GSU)</td><td><span class="tag">Enroll</span> Record 54,320 enrolled (+1.24%). No new downtown supply surfaced.</td><td class="r src">Atlanta News First 10-14</td></tr>
+          <tr><td>UTSA</td><td><span class="tag">Txn</span> Palladius Capital bought The Luxx (694 beds) near UTSA; sale undated. Enrollment 38,200+ (fall '25, +7%). The SA conventional market is the weakest large metro (separate asset class).</td><td class="r src">REBusiness (undated)</td></tr>
+          <tr><td>UC Santa Barbara</td><td><span class="chip flag">Supply</span> San Benito (~2,100 on-campus beds) targets fall 2027. No new Isla Vista item this week.</td><td class="r src">UCSB (carried)</td></tr>
+          <tr><td>Univ. of Florida</td><td><span class="chip flag">Supply</span> Balfour Beatty 2,217-bed on-campus redevelopment on the Trusler/Simpson/Graham sites, part of a ~$2B plan. Off-campus: Zaya (703 beds) leasing; Chapter House (684) under construction.</td><td class="r src">MHN/IREI <span class="stale">as of 07-22</span></td></tr>
+          <tr><td>Michigan</td><td><span class="chip flag">Supply</span> Core Spaces' Hub Ann Arbor William (638 beds) delivered by 07-15. Hub Ann Arbor State is slated for 2027. Also: Landmark's Legacy (521 beds), Rambler (1,009), Chapter (625), and U-M's 2,300-bed Central Campus project.</td><td class="r src">IREI/rejournals <span class="stale">as of 07-2026</span></td></tr>
+          <tr><td>Alabama</td><td><span class="chip flag">Supply</span> Greystar's $70M Union on Frank (396 beds) is 2 blocks from Bryant-Denny; timing n/a. Here Tuscaloosa (430 beds) and The Walk (251) are operating.</td><td class="r src">REBusiness (undated)</td></tr>
+          <tr><td>USC-Columbia</td><td><span class="tag">Enroll</span> Fall '26 enrollment ~41,650 (+2.5%). The $210M ~1,800-bed project is slipping. A 504-bed near-campus property is 99% pre-leased for AY26/27. Nothing new this week.</td><td class="r src">USC (carried) <span class="stale">as of 09-2026</span></td></tr>
         </tbody>
       </table>
     </div>
@@ -284,15 +281,15 @@
     <div class="body">
       <h2>Hotels</h2>
       <table>
-        <caption>Week trend vs. prior week / prior year as reported. US (CoStar, wk ending 10-31): RevPAR $101.88 <span class="chip up">+9.7%</span>, ADR $164.95 <span class="chip up">+5.2%</span>, occ 61.8% <span class="chip up">+4.3%</span>; 20 of the Top 25 markets had RevPAR gains.</caption>
+        <caption>Week trend vs. prior year as reported. National (CoStar, wk Nov 1–7): RevPAR $109.55 <span class="chip up">+4.7%</span>, ADR $168.35 <span class="chip up">+3.2%</span>, occupancy 65.1% <span class="chip up">+1.4%</span>. 15 of the top 25 markets were up; non-top-25 markets +7.1%. Growth slowed from +9.7% the prior week. Nov 8–14 was also positive YoY (figures n/a).</caption>
         <thead>
           <tr><th>Market</th><th class="r">RevPAR</th><th class="r">ADR</th><th class="r">Occupancy</th><th>Demand driver</th><th class="r">Source</th></tr>
         </thead>
         <tbody>
           <!-- FILL: one <tr> per hotel market -->
-          <tr><td>LA / Burbank</td><td class="r num-cell"><span class="chip up">+31.5%</span> <span class="stale">as of Q1</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">74.6% <span class="stale">as of Q1</span></td><td>Post-fire rebound and World Cup lift; HVS forecasts 2026 RevPAR +4.5% and expects H2 to fade; CoStar called summer demand "cooling." No Burbank-specific data.</td><td class="r src">Pebblebrook/CoStar Q1'26; HVS</td></tr>
-          <tr><td>Austin</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell"><span class="na">n/a this week</span></td><td>Occupancy is still declining but more slowly; ADR/RevPAR are among the highest in Texas. New supply: 1 Hotel Austin Waterline (252 rooms) opened Sept. Convention center closed for rebuild.</td><td class="r src">M&amp;M Q1'26; Lodging Dev. 10-2026</td></tr>
-          <tr><td>Oklahoma City</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">—</td><td class="r num-cell">—</td><td>No reliable 2026 figure. The last credible read (Newmark 1Q25) showed occupancy slightly down YoY.</td><td class="r src">Newmark <span class="stale">as of 1Q25</span></td></tr>
+          <tr><td>LA / Burbank</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">—</td><td class="r num-cell">—</td><td>No Burbank or Oct figure. LA Q1 RevPAR <span class="chip up">+31.5%</span>, occ 74.6% (post-fire rebound); CoStar says cooling summer demand muted later results <span class="stale">as of Q1–Q3</span></td><td class="r src">Pebblebrook;<br>CoStar</td></tr>
+          <tr><td>Austin</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">—</td><td class="r num-cell">—</td><td>Under pressure Jan–Jul '26 as new supply outpaced demand, with the convention center closed for rebuild. 2024 baseline: occ ~66%, ADR $169, RevPAR $112</td><td class="r src">M&amp;M outlook 10-2026;<br>Matthews/CoStar</td></tr>
+          <tr><td>Oklahoma City</td><td class="r num-cell"><span class="na">n/a this week</span></td><td class="r num-cell">—</td><td class="r num-cell">—</td><td>No reliable 2026 figure. Last: T12 guest-paid RevPAR $61.02 <span class="stale">as of 1Q25</span></td><td class="r src">Newmark</td></tr>
         </tbody>
       </table>
     </div>
@@ -305,11 +302,11 @@
       <h2>Watch items</h2>
       <ol class="watch">
         <!-- FILL: 3–5 <li> -->
-        <li>Dec 8–9 FOMC: hike odds are ~77–80% after the strong October jobs report. The November jobs report (Dec 4) is the last major input. The 10-yr has eased to ~4.88% anyway, so the long end and the policy rate are moving in opposite directions.</li>
-        <li>National rents turned positive YoY (+0.1%, Apartment List Oct data) for the first time since mid-2023. Watch whether Sun Belt held metros follow or lag through the winter off-season.</li>
-        <li>Texas supply runoff: San Antonio's 2026 deliveries are down ~63% and Dallas absorption exceeds deliveries, but Austin and San Antonio concessions are still deep (Austin: 37% of units, ~15% average discount).</li>
-        <li>Student housing: Yardi expects fall occupancy below 2025 and slower rent growth (+1.1%), with 18,500 beds under construction. Gainesville and Ann Arbor have the most visible new near-campus pipelines.</li>
-        <li>Hotel momentum: national RevPAR is up ~10% YoY in late October against soft November 2025 comps, but market-level reads for Austin, LA/Burbank and OKC are missing.</li>
+        <li><b>Dec 8–9 FOMC.</b> A hike to 4.00–4.25% is near-fully priced, and 50 bps is on the table. Nov jobs (12-04) is the last big data point before the meeting. With the 10-yr around 5%, refi and exit-cap assumptions get tested again.</li>
+        <li><b>Fall 2027 student pre-lease stalled at 3.8%.</b> October usually adds 5–6 pts and didn't. Watch whether November and December catch up, especially at UF and Michigan, where large new bed counts are coming.</li>
+        <li><b>Sunbelt supply is turning.</b> Austin deliveries are down ~74%, DFW absorption is set to triple by Q3'27, and San Antonio may face a shortage by late 2027. Even so, all four oversupply metros still post negative YoY rents.</li>
+        <li><b>Thin leverage.</b> CMBS cap rates are roughly level with coupons. Agency debt (~4.98%) is the cheapest source as conduit pricing (6.44%) tracks Treasuries higher.</li>
+        <li><b>Apartment List November-data report is due early December.</b> It should show whether the first positive national YoY print (+0.1%) holds through the off-season.</li>
       </ol>
     </div>
   </section>
@@ -319,7 +316,7 @@
     <div class="num">06</div>
     <div class="body">
       <h2>Metro leaderboard — YoY multifamily rent growth</h2>
-      <p><span class="stale">Partial, carried fwd:</span> Apartment List's October-data metro table didn't appear in search snippets, so ranks are carried from last week. Bottom 10 is Apartment List August data (all-unit). Top ranks fill gaps from Zillow and Apartments.com (basis tagged). Unfilled ranks are marked n/a.</p>
+      <p>Single index: Apartment List, all-unit basis. Oct-data ranks are used where snippets surfaced them; other ranks use Sept or Aug data (tagged) or are marked n/a. The full Oct-data metro table did not appear in search snippets this week.</p>
       <div class="board">
         <div>
           <h3>Top 10</h3>
@@ -327,14 +324,12 @@
             <thead><tr><th class="rank">#</th><th>Metro</th><th class="r">YoY</th></tr></thead>
             <tbody>
               <!-- FILL: ranks 1–10; class="held" for owned metros -->
-              <tr><td class="rank">1</td><td>San Francisco <span class="src">Zillow Aug</span></td><td class="r num-cell"><span class="chip up">+11.7%</span></td></tr>
-              <tr><td class="rank">2</td><td>San Jose <span class="src">Zillow Aug</span></td><td class="r num-cell"><span class="chip up">+8.0%</span></td></tr>
-              <tr><td class="rank">3</td><td>Norfolk / Va Beach <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+5.8%</span></td></tr>
-              <tr><td class="rank">4</td><td>East Bay <span class="src">Zillow Aug</span></td><td class="r num-cell"><span class="chip up">+5.4%</span></td></tr>
-              <tr><td class="rank">5–10</td><td><span class="na">n/a this week</span></td><td class="r num-cell">—</td></tr>
-              <tr class="held"><td class="rank">—</td><td>Columbus <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+1.2%</span></td></tr>
-              <tr class="held"><td class="rank">—</td><td>Atlanta <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+1.1%</span></td></tr>
-              <tr class="held"><td class="rank">—</td><td>Indianapolis <span class="src">Apts.com Sept</span></td><td class="r num-cell"><span class="chip up">+1.0%</span></td></tr>
+              <tr><td class="rank">1</td><td>San Francisco <span class="src">Oct</span></td><td class="r num-cell"><span class="chip up">+13%</span></td></tr>
+              <tr><td class="rank">2</td><td>San Jose <span class="src">Oct</span></td><td class="r num-cell"><span class="chip up">+9%</span></td></tr>
+              <tr><td class="rank">3–10</td><td><span class="na">n/a this week</span></td><td class="r num-cell">—</td></tr>
+              <tr class="held"><td class="rank">—</td><td>Atlanta <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−0.2%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Indianapolis <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−0.3%</span></td></tr>
+              <tr class="held"><td class="rank">—</td><td>Columbus <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−0.3%</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -344,14 +339,15 @@
             <thead><tr><th class="rank">#</th><th>Metro</th><th class="r">YoY</th></tr></thead>
             <tbody>
               <!-- FILL: ranks 1–10 from the bottom -->
-              <tr class="held"><td class="rank">1</td><td>San Antonio</td><td class="r num-cell"><span class="chip down">−5.1%</span></td></tr>
-              <tr><td class="rank">2</td><td>Las Vegas</td><td class="r num-cell"><span class="chip down">−3.6%</span></td></tr>
-              <tr><td class="rank">3</td><td>Denver</td><td class="r num-cell"><span class="chip down">−3.4%</span></td></tr>
-              <tr class="held"><td class="rank">4</td><td>Austin <span class="src">Sept: −2.3%</span></td><td class="r num-cell"><span class="chip down">−2.9%</span></td></tr>
-              <tr class="held"><td class="rank">—</td><td>Charlotte</td><td class="r num-cell"><span class="chip down">−2.5%</span></td></tr>
-              <tr class="held"><td class="rank">—</td><td>Dallas</td><td class="r num-cell"><span class="chip down">−2.3%</span></td></tr>
-              <tr class="held"><td class="rank">—</td><td>Houston</td><td class="r num-cell"><span class="chip down">−2.2%</span></td></tr>
-              <tr><td class="rank">—</td><td>Phoenix</td><td class="r num-cell"><span class="na">n/a this week</span></td></tr>
+              <tr class="held"><td class="rank">1</td><td>San Antonio <span class="src">Oct</span></td><td class="r num-cell"><span class="chip down">−3.8%</span></td></tr>
+              <tr><td class="rank">2</td><td>Las Vegas <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−3.6%</span></td></tr>
+              <tr><td class="rank">3</td><td>Denver <span class="src">Sept</span></td><td class="r num-cell"><span class="chip down">−3.4%</span></td></tr>
+              <tr class="held"><td class="rank">4</td><td>Austin <span class="src">Sept</span></td><td class="r num-cell"><span class="chip down">−2.9%</span></td></tr>
+              <tr><td class="rank">5</td><td>Phoenix <span class="src">Sept</span></td><td class="r num-cell"><span class="chip down">−2.9%</span></td></tr>
+              <tr class="held"><td class="rank">6</td><td>Charlotte <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−2.5%</span></td></tr>
+              <tr class="held"><td class="rank">7</td><td>Dallas <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−2.3%</span></td></tr>
+              <tr class="held"><td class="rank">8</td><td>Houston <span class="src">Aug, carried</span></td><td class="r num-cell"><span class="chip down">−2.2%</span></td></tr>
+              <tr><td class="rank">9–10</td><td><span class="na">n/a this week</span></td><td class="r num-cell">—</td></tr>
             </tbody>
           </table>
         </div>
@@ -363,15 +359,15 @@
     <h4>Sources</h4>
     <ul>
       <!-- FILL: one <li> per source with date pulled -->
-      <li>Apartment List National Rent Report — Oct data (national), via CRE Daily, pulled 2026-11-15 (all-unit basis); metro data carried fwd from Aug-data release 2026-09-27; Austin Sept data</li>
-      <li>FRED DGS10 / YCharts — 10-yr UST through 2026-11-09</li>
-      <li>BLS Oct jobs report + CME FedWatch / LSEG via InvestmentNews, primerates — 2026-11-06; FOMC hold 2026-10-28</li>
-      <li>IPA, NMHC quarterly survey — Q3 2026; Arbor/Chandan small-MF — Q2 2026</li>
-      <li>Transwestern, Northmarq, CoStar (DFW) — Q2 2026; Matthews, Lee &amp; Associates — Q3 2026 (carried)</li>
-      <li>Northmarq San Antonio; Multi-Housing News SA report — 10-2026; RealPage Austin Q2 2026</li>
-      <li>RealPage student pre-lease — 08-2026; Yardi Matrix national student housing report — 10-2026</li>
-      <li>REBusiness, MHN, JLL, BDC, university releases — campus items (dates per row)</li>
-      <li>CoStar US weekly hotel results — wk ending 2026-10-31 (pub 11-05); Pebblebrook/HVS (LA); M&amp;M, Lodging Development (Austin); Newmark (OKC 1Q25)</li>
+      <li>Apartment List National Rent Report — Oct data (national + SF/SJ/San Antonio), via CRE Daily / WSB-TV, pulled 2026-11-22 (all-unit basis); Sept-data metros; Aug-data metros carried fwd from 2026-09-27</li>
+      <li>Dow Jones "Data Talk" via Morningstar — 10-yr UST 2026-11-19 / 11-10; Trading Economics 11-13</li>
+      <li>BLS October CPI coverage (InvestmentNews, National Mortgage News, Continuum Economics) + CME FedWatch — mid-Nov 2026; FOMC hold 2026-10-28</li>
+      <li>NAA Apartment Market Pulse Q3 2026; RealPage Q3 2026; Arbor/Chandan small-MF (Q2/Q3 2026); CRED iQ CMBS (06-2026); Yardi Matrix Oct 2026</li>
+      <li>Colliers DFW (Q3, via CRE Daily); Matthews DFW Q2 / Houston, Charlotte, San Antonio Q3 2026; Lee &amp; Associates Houston Q3; Cushman &amp; Wakefield SA Q3; Northmarq Charlotte Q2; JLL (Pavillion Village, 09-24)</li>
+      <li>CoStar / CRE Daily / RealPage Austin (2026); Texas Public Radio (09-14); Apartments.com Texas mid-2026</li>
+      <li>RealPage student pre-lease (Fall 2027, Oct data, via CRE Daily) and Fall 2026 final (08-2026); Yardi Matrix national student housing (10-2026)</li>
+      <li>MHN, IREI, rejournals, REBusiness, Greystar, UT, Atlanta News First, USC releases — campus items (dates per row)</li>
+      <li>CoStar US weekly hotel results — wk Nov 1–7 2026 (pub 11-12, via Hospitality Net/Vinetur); M&amp;M hotel outlook (10-2026); Pebblebrook/CoStar (LA); Newmark (OKC 1Q25)</li>
     </ul>
     <p class="disclaimer">Informational market briefing only. Describes observed trends; not
     investment advice and not a recommendation to buy, sell, or hold any asset.</p>
